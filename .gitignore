@@ -5,6 +5,9 @@ dist/
 # dependencies
 node_modules/
 
+# descriere
+descriere.md
+
 # logs
 npm-debug.log*
 yarn-debug.log*

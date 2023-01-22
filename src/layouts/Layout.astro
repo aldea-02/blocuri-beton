@@ -20,9 +20,11 @@ const { title = 'Blocuri Beton' } = Astro.props
 		<meta name='keywords' content='' />
 		<title>{title}</title>
 	</head>
-	<body class="min-w-[22rem] flex flex-col items-center p-8">
+	<body class='min-w-[22rem] flex flex-col p-6 md:p-12'>
 		<Header />
-		<slot />
+		<main class='flex flex-col justify-between py-8 px-2 md:m-6 gap-10'>
+			<slot />
+		</main>
 		<Footer />
 	</body>
 </html>

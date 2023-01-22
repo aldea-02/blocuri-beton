@@ -1,9 +1,16 @@
 ---
+import Avantaje from '../components/Avantaje.astro'
+import Descriere from '../components/Descriere.astro'
+import Detalii from '../components/Detalii.astro'
+import Dimensiuni from '../components/Dimensiuni.astro'
+import Lista from '../components/Lista.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title='Acasă'>
-	<main class="flex items-center justify-between p-8">
-		<h1>Acasă</h1>
-	</main>
+	<Descriere />
+	<Dimensiuni />
+	<Lista />
+	<Avantaje />
+	<Detalii />
 </Layout>
