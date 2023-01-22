@@ -1,0 +1,29 @@
+---
+export interface Props {
+	columns: string
+	titleColumns: string
+	title: string
+	content: Array<lista>
+}
+export interface lista {
+	style?: string
+	text: string
+}
+
+const { columns, titleColumns, title, content } = Astro.props
+---
+
+<ul class={`grid grid-cols-2 gap-2 md:gap-3 ${columns}`}>
+	<div class={`text-xl font-bold ${titleColumns}`}>
+		{title}
+	</div>
+	{
+		content.map((item) => (
+			<li
+				class={`bg-neutral-200 hover:bg-neutral-300 rounded-lg p-2 text-center ${item.style} `}
+			>
+				{item.text}
+			</li>
+		))
+	}
+</ul>
