@@ -4,17 +4,21 @@ export interface Props {
 	titleColumns: string
 	title: string
 	content: Array<lista>
+	image: string
 }
 export interface lista {
 	style?: string
 	text: string
 }
 
-const { columns, titleColumns, title, content } = Astro.props
+const { columns, titleColumns, title, content, image } = Astro.props
 ---
 
+<figure>
+	<img src={image} class='border-4 border-neutral-800' />
+</figure>
 <ul class={`grid grid-cols-2 gap-2 md:gap-3 ${columns}`}>
-	<span class={`text-xl font-bold ${titleColumns}`}>
+	<span class={`text-2xl font-semibold ${titleColumns}`}>
 		{title}
 	</span>
 	{

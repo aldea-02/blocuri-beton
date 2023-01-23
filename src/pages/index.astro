@@ -1,76 +1,87 @@
 ---
 import Dimensiuni from '../components/Dimensiuni.astro'
 import Grid from '../components/Grid.astro'
+import WhatsAppButton from '../images/WhatsAppButton.svg'
 import Layout from '../layouts/Layout.astro'
+import bloc1 from '../images/bloc1.png'
 ---
 
 <Layout title='Acasă'>
-	<p class='font-semibold'>
-		O solutie simpla, functionala si adaptabila pentru constructiile modulare
-		flexibile temporare sau permanente.
-	</p>
-	<Dimensiuni />
-	<Grid
-		columns='md:grid-cols-4 lg:grid-cols-8'
-		titleColumns='col-span-2 md:col-span-4 lg:col-span-8'
-		title={'Puteti crea:'}
-		content={[
-			{ text: 'Pereti de sprijin' },
-			{ text: 'Pereti despartitori' },
-			{ text: 'Ziduri de retinere' },
-			{ text: 'Baricade de siguranta' },
-			{ text: 'Protectii mal' },
-			{ text: 'Cai navigabile' },
-			{ text: 'Buncare' },
-			{ text: 'Constructii de gard' },
-			{
-				text: 'Padocuri pentru depozitarea materialelor vrac uscate: aggregate(nisip, pietris sau piatra sparta), deseuri sau materiale reciclabile, materiale agrircole(fertilizanti sau grane), lemn, sare, etc',
-				style: 'col-span-2 md:col-span-4 lg:col-span-8'
-			}
-		]}
-	/>
-	<Grid
-		columns='md:grid-cols-3'
-		titleColumns='col-span-2 md:col-span-3'
-		title={'Avantajele blocurilor de beton interblocabile sunt:'}
-		content={[
-			{ text: 'Durabilitate' },
-			{ text: 'Rentabilitate' },
-			{ text: 'Reutizabilitate' },
-			{ text: 'Instalare rapida' },
-			{ text: 'Imbinare si aliniere usoara' },
-			{ text: 'Nu necesita fundatie' },
-			{
-				text: 'Constructia este gata de utilizare in cateva ore',
-				style: 'col-span-2 md:col-span-1'
-			},
-			{
-				text: 'Configuratia poate fi modificata prin adaugarea sau eliminarea blocurilor de beton pe inaltime sau lungime',
-				style: 'col-span-2 md:col-span-2'
-			}
-		]}
-	/>
-	<Grid
-		columns='md:grid-cols-4'
-		titleColumns='col-span-2 md:col-span-4'
-		title={'Pot fi:'}
-		content={[
-			{ text: 'modificate, extinse sau relocate complet' },
-			{ text: 'folosite in zone industriale precum terminale portuare' },
-			{
-				text: 'solutia ideala ca si bariere de incendiu pentru materiale inflamabile sau materiale periculoase'
-			},
-			{
-				text: 'utilizate pentru a controla, reduce sau preveni efectele daunatoare a cresterii nivelului apei'
-			},
-			{
-				text: 'folosite ca blocaje rutiere, pentru gestionarea temporara sau permanenta a traficului',
-				style: 'col-span-2 md:col-span-1'
-			},
-			{
-				text: 'solutia perfecta pentru o structura stabila, cu pereti duri care rezista la incarcarea materialelor din siloz pe perioada depozitarii sau in timpulincarcarii sau descarcarii materialului',
-				style: ' col-span-2 md:col-span-3'
-			}
-		]}
-	/>
+	<main class='flex flex-col justify-between gap-10 md:mt-10'>
+		<p class='font-semibold text-xl'>
+			O soluție simplă, funcțională și adaptabilă pentru construcțiile modulare flexibile temporare sau permanente. 
+		</p>
+		<Dimensiuni />
+		<Grid
+			columns='md:grid-cols-4 lg:grid-cols-8'
+			titleColumns='col-span-2 md:col-span-4 lg:col-span-8'
+			title={'Puteți crea:'}
+			content={[
+				{ text: 'Pereți de sprijin' },
+				{ text: 'Pereți despărțitori' },
+				{ text: 'Ziduri de reținere' },
+				{ text: 'Baricade de siguranță' },
+				{ text: 'Protecții mal' },
+				{ text: 'Căi navigabile' },
+				{ text: 'Buncăre' },
+				{ text: 'Construcții de gard' },
+				{
+					text: 'Padocuri pentru depozitarea materialelor vrac uscate: aggregate(nisip, pietriș sau piatră spartă), deșeuri sau materiale reciclabile, materiale agrircole(fertilizanti sau grâne), lemn, sare, etc',
+					style: 'col-span-2 md:col-span-4 lg:col-span-8'
+				}
+			]}
+			image={bloc1}
+		/>
+		<Grid
+			columns='md:grid-cols-3'
+			titleColumns='col-span-2 md:col-span-3'
+			title={'Avantajele blocurilor de beton interblocabile sunt:'}
+			content={[
+				{ text: 'Durabilitate' },
+				{ text: 'Rentabilitate' },
+				{ text: 'Reutizabilitate' },
+				{ text: 'Instalare rapidă' },
+				{ text: 'Îmbinare și aliniere ușoară' },
+				{ text: 'Nu necesită fundație' },
+				{
+					text: 'Construcția este gata de utilizare în câteva ore',
+					style: 'col-span-2 md:col-span-1'
+				},
+				{
+					text: 'Configurația poate fi modificată prin adăugarea sau eliminarea blocurilor de beton pe înălțime sau lungime',
+					style: 'col-span-2 md:col-span-2'
+				}
+			]}
+			image={bloc1}
+		/>
+		<Grid
+			columns='md:grid-cols-4'
+			titleColumns='col-span-2 md:col-span-4'
+			title={'Pot fi:'}
+			content={[
+				{ text: 'Modificate, extinse sau relocate complet' },
+				{ text: 'Folosite în zone industriale precum terminale portuare' },
+				{
+					text: 'Soluția ideală ca și bariere de incendiu pentru materiale inflamabile sau materiale periculoase'
+				},
+				{
+					text: 'Utilizate pentru a controla, reduce sau preveni efectele dăunătoare a creșterii nivelului apei'
+				},
+				{
+					text: 'Folosite ca blocaje rutiere, pentru gestionarea temporară sau permanentă a traficului',
+					style: 'col-span-2 md:col-span-1'
+				},
+				{
+					text: 'Soluția perfectă pentru o structura stabilă, cu pereți duri care rezistă la încărcarea materialelor din siloz pe perioada depozitării sau în timpulincarcarii sau descărcării materialului',
+					style: ' col-span-2 md:col-span-3'
+				}
+			]}
+			image={bloc1}
+		/>
+		<section class='sticky bottom-4 ml-auto drop-shadow-lg -mr-2 '>
+			<a href='https://wa.me/722657555'>
+				<img src={WhatsAppButton} alt='Chat on Whatsapp Icon' />
+			</a>
+		</section>
+	</main>
 </Layout>

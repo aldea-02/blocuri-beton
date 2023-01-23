@@ -1,7 +1,27 @@
 ---
+import facebook from '../images/facebook.svg'
+import messenger from '../images/messenger.svg'
+import whatsapp from '../images/whatsapp.svg'
 import Layout from '../layouts/Layout.astro'
+
+const contactInfo = [
+	{ app: whatsapp, text: '+40 722 657 555', link: '' },
+	{ app: facebook, text: 'Blocuri Beton', link: '' },
+	{ app: messenger, text: 'Blocuri Beton', link: '' }
+]
 ---
 
 <Layout title='Contact'>
-	
+	<main class='flex flex-col justify-between gap-5 md:mt-10 mb-10'>
+		{
+			contactInfo.map((item) => (
+				<section class='bg-neutral-200 rounded-full p-2 hover:bg-neutral-300'>
+					<a href={item.link} class='flex items-center gap-2'>
+						<img src={item.app} alt='whatsapp icon' class='h-10 w-10' />
+						<span>{item.text}</span>
+					</a>
+				</section>
+			))
+		}
+	</main>
 </Layout>
