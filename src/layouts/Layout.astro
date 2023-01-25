@@ -25,9 +25,7 @@ const { title = 'Blocuri Beton' } = Astro.props
 	</head>
 	<body class='min-w-[22rem] max-w-6xl mx-auto flex flex-col p-6 md:p-12'>
 		<Header />
-		<main class='flex flex-col justify-between gap-10 mt-24 md:mt-10 mb-10'>
-			<slot />
-		</main>
+		<slot />
 		<Footer />
 	</body>
 </html>
