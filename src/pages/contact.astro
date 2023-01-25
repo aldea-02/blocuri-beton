@@ -5,14 +5,18 @@ import whatsapp from '../images/whatsapp.svg'
 import Layout from '../layouts/Layout.astro'
 
 const contactInfo = [
-	{ app: whatsapp, text: '+40 722 657 555', link: '' },
-	{ app: facebook, text: 'Blocuri Beton', link: '' },
-	{ app: messenger, text: 'Blocuri Beton', link: '' }
+	{ app: whatsapp, text: '+40 774 958 379', link: 'https://wa.me/774958379' },
+	{
+		app: facebook,
+		text: 'Blocuri Beton',
+		link: 'https://www.facebook.com/profile.php?id=100087477765366'
+	},
+	{ app: messenger, text: 'Blocuri Beton', link: 'http://m.me/' }
 ]
 ---
 
 <Layout title='Contact'>
-	<main class='flex flex-col justify-between gap-5 md:mt-10 mb-10'>
+	<main class='flex flex-col justify-between gap-5 md:mt-10 mb-2'>
 		{
 			contactInfo.map((item) => (
 				<section class='bg-neutral-200 rounded-full p-2 hover:bg-neutral-300'>
