@@ -11,17 +11,23 @@ const contactInfo = [
 		text: 'Blocuri Beton',
 		link: 'https://www.facebook.com/profile.php?id=100087477765366'
 	},
-	{ app: messenger, text: 'Blocuri Beton', link: 'http://m.me/' }
+	{
+		app: messenger,
+		text: 'Blocuri Beton',
+		link: 'https://www.facebook.com/profile.php?id=100087477765366'
+	}
 ]
 ---
 
 <Layout title='Blocuri Beton - Contact'>
-	<main class='flex flex-col justify-between gap-5 mt-28 mb-6 md:mt-12 md:mb-10'>
+	<main
+		class='flex flex-col justify-between gap-5 mt-28 mb-6 md:mt-12 md:mb-10'
+	>
 		{
 			contactInfo.map((item) => (
 				<section class='bg-neutral-200 rounded-full p-2 hover:bg-neutral-300'>
-					<a href={item.link} class='flex items-center gap-2'>
-						<img src={item.app} alt='whatsapp icon' class='h-10 w-10' />
+					<a href={item.link} target='_blank' class='flex items-center gap-2'>
+						<img src={item.app} alt='social media app icon' class='h-10 w-10' />
 						<span>{item.text}</span>
 					</a>
 				</section>
