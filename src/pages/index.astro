@@ -1,21 +1,37 @@
 ---
-import Dimensiuni from '../components/Dimensiuni.astro'
 import Grid from '../components/Grid.astro'
 import bloc01 from '../images/bloc01.jpeg'
 import bloc02 from '../images/bloc02.jpeg'
 import bloc03 from '../images/bloc03.jpeg'
+import bloc04 from '../images/bloc04.jpeg'
 import WhatsAppButton from '../images/WhatsAppButton.svg'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title='Blocuri Beton - Acasă'>
-	<main class='flex flex-col justify-between gap-10 mt-28 mb-6 md:mt-12
-	md:mb-10'>
+	<main
+		class='flex flex-col justify-between gap-10 mt-28 mb-6 md:mt-12 md:mb-10'
+	>
 		<p class='font-semibold text-xl'>
 			O soluție simplă, funcțională și adaptabilă pentru construcțiile modulare
 			flexibile temporare sau permanente.
 		</p>
-		<Dimensiuni />
+		<button
+			class='hover:bg-neutral-600 bg-neutral-900 text-white rounded-md p-2'
+			><a href='/galerie'>Vedeți galerie &#8594;</a></button
+		>
+		<Grid
+			columns='md:grid-cols-4'
+			titleColumns='md:col-span-4 col-span-2 '
+			title={'Dimensiuni:'}
+			content={[
+				{ text: '160 x 80 x 80' },
+				{ text: '80 x 80 x 80' },
+				{ text: '160 x 40 x 40' },
+				{ text: '40 x 40 x 40' }
+			]}
+			image={bloc01}
+		/>
 		<Grid
 			columns='md:grid-cols-4 lg:grid-cols-8'
 			titleColumns='col-span-2 md:col-span-4 lg:col-span-8'
@@ -34,7 +50,7 @@ import Layout from '../layouts/Layout.astro'
 					style: 'col-span-2 md:col-span-4 lg:col-span-8'
 				}
 			]}
-			image={bloc01}
+			image={bloc02}
 		/>
 		<Grid
 			columns='md:grid-cols-3'
@@ -56,7 +72,7 @@ import Layout from '../layouts/Layout.astro'
 					style: 'col-span-2 md:col-span-2'
 				}
 			]}
-			image={bloc02}
+			image={bloc03}
 		/>
 		<Grid
 			columns='md:grid-cols-4'
@@ -80,7 +96,6 @@ import Layout from '../layouts/Layout.astro'
 					style: ' col-span-2 md:col-span-3'
 				}
 			]}
-			image={bloc03}
 		/>
 		<section class='sticky bottom-4 ml-auto drop-shadow-lg -mr-2'>
 			<a href='https://wa.me/774958379'>

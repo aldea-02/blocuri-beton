@@ -1,10 +1,12 @@
 ---
+import { defaultTSConfig } from 'astro/dist/core/config/tsconfig'
+
 export interface Props {
 	columns: string
 	titleColumns: string
 	title: string
 	content: Array<lista>
-	image: string
+	image?: string
 }
 export interface lista {
 	style?: string
@@ -14,9 +16,6 @@ export interface lista {
 const { columns, titleColumns, title, content, image } = Astro.props
 ---
 
-<figure>
-	<img src={image} alt="Poza Bloc Beton" class='border-4 border-neutral-800 sm:max-w-lg mx-auto' />
-</figure>
 <ul class={`grid grid-cols-2 gap-2 md:gap-3 ${columns}`}>
 	<li class={`text-2xl font-semibold ${titleColumns}`}>
 		{title}
@@ -24,10 +23,23 @@ const { columns, titleColumns, title, content, image } = Astro.props
 	{
 		content.map((item) => (
 			<li
-				class={`bg-neutral-200 hover:bg-neutral-300 rounded-lg p-2 text-center ${item.style} `}
+				class={`bg-neutral-200 hover:bg-neutral-300 rounded-lg p-2 text-center ${
+					item.style || ''
+				} `}
 			>
 				{item.text}
 			</li>
 		))
 	}
 </ul>
+{
+	image && (
+		<figure>
+			<img
+				src={image}
+				alt='Poza Bloc Beton'
+				class='border-4 border-neutral-800 sm:max-w-lg mx-auto'
+			/>
+		</figure>
+	)
+}

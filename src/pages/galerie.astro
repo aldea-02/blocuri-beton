@@ -1,0 +1,41 @@
+---
+import bloc01 from '../images/bloc01.jpeg'
+import bloc02 from '../images/bloc02.jpeg'
+import bloc03 from '../images/bloc03.jpeg'
+import bloc04 from '../images/bloc04.jpeg'
+import bloc05 from '../images/bloc05.jpeg'
+import bloc06 from '../images/bloc06.jpeg'
+import Layout from '../layouts/Layout.astro'
+
+const poze = [
+	{ link: bloc01, text: '' },
+	{ link: bloc02, text: '' },
+	{ link: bloc03, text: '' },
+	{ link: bloc04, text: '' },
+	{ link: bloc05, text: '' },
+	{ link: bloc06, text: '' }
+]
+---
+
+<Layout title='Blocuri Beton - Galerie'>
+	<main
+		class='flex flex-col justify-between gap-10 mt-28 mb-6 md:mt-12 md:mb-10'
+	>
+		<button
+			class='hover:bg-neutral-600 bg-neutral-900 text-white rounded-md p-2 w-16'
+			><a href='/'>&#8592;</a></button
+		>
+		{
+			poze.map((poza) => (
+				<figure class='sm:max-w-lg mx-auto'>
+					<img
+						src={poza.link}
+						alt='Poza Bloc Beton'
+						class='border-4 border-neutral-800'
+					/>
+					<figcaption>{poza.text}</figcaption>
+				</figure>
+			))
+		}
+	</main>
+</Layout>
